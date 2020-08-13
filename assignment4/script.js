@@ -13,7 +13,7 @@
 Hello Yaakov
 Good Bye John
 Good Bye Jen
-Good Bye Jason
+Good Bye Jasons
 Hello Paul
 Hello Frank
 Hello Larry
@@ -28,7 +28,7 @@ assignment.
 WARNING!!! WARNING!!!
 
 */
-
+(function(){
 // STEP 1:
 // Wrap the entire contents of script.js inside of an IIFE
 // See Lecture 52, part 2
@@ -41,7 +41,7 @@ var names = ["Yaakov", "John", "Jen", "Jason", "Paul", "Frank", "Larry", "Paula"
 // using the 'speak' method or either helloSpeaker's or byeSpeaker's
 // 'speak' method.
 // See Lecture 50, part 1
-for (var i in names) {
+for (var i=0; i < names.length ; i++) {
 
   // STEP 11:
   // Retrieve the first letter of the current name in the loop.
@@ -50,8 +50,7 @@ for (var i in names) {
   // string object's 'toLowerCase' method on the result so we can compare
   // to lower case character 'j' afterwards.
   // Look up these methods on Mozilla Developer Network web site if needed.
-  var firstLetter = null
-  var firstLetter = names[i].charAt(0)
+   var firstLetter = names[i].charAt(0).toLowerCase();
 
   // STEP 12:
   // Compare the 'firstLetter' retrieved in STEP 11 to lower case
@@ -64,3 +63,5 @@ for (var i in names) {
      helloSpeaker.speak(names[i]);
   }
 }
+
+})();
